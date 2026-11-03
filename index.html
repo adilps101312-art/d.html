@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELORA RUNNER 3D</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- GAME HUD -->
+  <div id="hud">
+    <h2>ELORA RUNNER</h2>
+
+    <p>SCORE: <span id="score">0</span></p>
+
+    <p>🪙 COINS:
+      <span id="coins">0</span> / 100
+    </p>
+
+    <p>🎁 GIFT BOX:
+      <span id="giftBoxes">0</span>
+    </p>
+
+    <p>🚀 ROCKET TOY:
+      <span id="rocketCount">0</span>
+    </p>
+
+    <div id="rocketStatus">
+      ROCKET NOT COLLECTED
+    </div>
+  </div>
+
+  <!-- START SCREEN -->
+  <div id="startScreen" class="screen">
+    <h1>ELORA RUNNER</h1>
+    <p>RUN • JUMP • COLLECT</p>
+    <p>🪙 COLLECT 100 COINS</p>
+    <p>🎁 FIND GIFT BOXES</p>
+    <p>🚀 FIND ROCKET TOYS</p>
+
+    <button id="startBtn">START GAME</button>
+  </div>
+
+  <!-- GAME OVER -->
+  <div id="gameOver" class="screen hidden">
+    <h1>GAME OVER</h1>
+
+    <p>YOUR SCORE:
+      <span id="finalScore">0</span>
+    </p>
+
+    <button id="restartBtn">PLAY AGAIN</button>
+  </div>
+
+  <!-- GAME CONTROLS -->
+  <div id="controls">
+    <button id="leftBtn">◀</button>
+    <button id="jumpBtn">▲</button>
+    <button id="slideBtn">▼</button>
+    <button id="rightBtn">▶</button>
+  </div>
+
+  <script type="module" src="game.js"></script>
+
+</body>
+</html>

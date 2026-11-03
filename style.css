@@ -1,0 +1,187 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #87ceeb;
+}
+
+canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+}
+
+/* GAME HUD */
+#hud {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 5;
+  color: white;
+  background: linear-gradient(135deg, rgba(10,15,30,.94), rgba(35,25,5,.92));
+  padding: 15px 20px;
+  border: 2px solid #d6a928;
+  border-radius: 16px;
+  line-height: 1.8;
+  min-width: 205px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.4);
+}
+
+#hud h2 {
+  color: #ffd700;
+  font-size: 21px;
+  margin-bottom: 7px;
+  letter-spacing: 1px;
+}
+
+#hud p {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#score {
+  color: #ffffff;
+}
+
+#coins {
+  color: #ffd700;
+}
+
+#giftBoxes {
+  color: #ff70b7;
+}
+
+#rocketCount {
+  color: #59d9ff;
+}
+
+#rocketStatus {
+  margin-top: 8px;
+  padding: 6px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.1);
+  color: #ff7777;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* START AND GAME OVER */
+.screen {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+  color: white;
+  background: radial-gradient(circle, rgba(30,45,70,.85), rgba(0,0,0,.94));
+}
+
+.screen h1 {
+  color: #ffd700;
+  font-size: clamp(35px, 8vw, 65px);
+  text-shadow: 0 4px 15px black;
+  letter-spacing: 3px;
+}
+
+.screen p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* BUTTONS */
+button {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #ffcf33, #ff8500);
+  border-radius: 12px;
+  padding: 15px 25px;
+  font-size: 18px;
+  box-shadow: 0 5px 0 #a85d00;
+  transition: transform .12s;
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #a85d00;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* GAME CONTROLS */
+#controls {
+  position: fixed;
+  z-index: 6;
+  bottom: 22px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+#controls button {
+  width: 58px;
+  height: 58px;
+  padding: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .75);
+  border: 2px solid #ffd700;
+  font-size: 23px;
+  box-shadow: 0 4px 0 #6e5100;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  #hud {
+    top: 8px;
+    left: 8px;
+    padding: 9px 12px;
+    min-width: 160px;
+  }
+
+  #hud h2 {
+    font-size: 16px;
+  }
+
+  #hud p {
+    font-size: 12px;
+  }
+
+  #controls {
+    bottom: 15px;
+    gap: 9px;
+  }
+
+  #controls button {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 800px) {
+  #controls {
+    opacity: .75;
+  }
+}
+
